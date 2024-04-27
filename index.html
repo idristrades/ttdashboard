@@ -8,12 +8,87 @@
   <title>T𝔯𝔞𝔡𝔦𝔫𝔤 T𝔥𝔢𝔬𝔯𝔦𝔢𝔰</title>
 </head>
 <body>
+      <div class="tape">
+        <script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" defer>
+          {
+            "symbols": [
+              {
+                "description": "",
+                "proName": "NASDAQ:INVO"
+              },
+              {
+                "description": "",
+                "proName": "NASDAQ:AGBA"
+              },
+              {
+                "description": "",
+                "proName": "NASDAQ:TAOP"
+              },
+              {
+                "description": "",
+                "proName": "AMEX:BURU"
+              },
+              {
+                "proName": "BITSTAMP:BTCUSD",
+                "title": "Bitcoin"
+              },
+              {
+                "description": "",
+                "proName": "AMEX:SPY"
+              },
+              {
+                "description": "",
+                "proName": "NYMEX:CL1!"
+              },
+              {
+                "description": "",
+                "proName": "OTC:CRCW"
+              },
+              {
+                "description": "",
+                "proName": "NASDAQ:SGD"
+              },
+                  {
+                "description": "",
+                "proName": "NASDAQ:APLM"
+              },
+                  {
+                "description": "",
+                "proName": "NASDAQ:WKSP"
+              },
+              {
+                "description": "",
+                "proName": "AMEX:BTTR"
+              },
+              {
+                "description": "",
+                "proName": "AMEX:SPY"
+              },
+              {
+                "description": "",
+                "proName": "NASDAQ:DBGI"
+              }
+            ],
+              "showSymbolLogo": true,
+                "colorTheme": "dark",
+                  "isTransparent": false,
+                    "largeChartUrl": "#",
+                      "displayMode": "adaptive",
+                        "locale": "en"
+          }
+
+        </script>
+      </div>
+  <div class="container">
+  
   <div class="data">
   <form id="ticker-form">
   <p><a class="no-hover" href="https://twitter.com/TradingTheories" target="_blank">𝕏 &#x40TradingTheories</a></p>
     <input type="text" id="ticker" name="ticker" placeholder="🔍 Enter a ticker symbol" required maxlength="6" autofocus onkeydown="handleKeyPress(event);">
-    <button id="btn1" type="submit" onclick="changeSymbol()">Sʜᴏᴡ Sᴛᴏᴄᴋ ᴅᴀᴛᴀ</button>
+    <div class="btns">
+    <button id="btn1" type="submit" onclick="changeSymbol()">Sʜᴏᴡ ᴅᴀᴛᴀ</button>
     <button type="reset" id="clear-btn">ᴄʟᴇᴀʀ</button>
+    </div>
   </form>
     <h5>☰｜TRACKERS</h5>
   <ul>
@@ -22,23 +97,23 @@
     <li><a href="https://www.iborrowdesk.com/" target="_blank">▣｜ COST TO BORROW</a></li>
     <li><a href="https://stockanalysis.com/stocks/earnings-calendar/" target="_blank">▣｜ UPCOMING EARNINGS</a></li>
     <li><a href="https://capedge.com/stock-split-calendar" target="_blank">▣｜ STOCK SPLIT CALENDAR</a></li>
-  </ul>
+   </ul>
   <div id="results"></div>
   </div>
-
-  <div class="chart">
+  
     <iframe
       id="tradingview"
       src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_9f1a0&symbol=SPY&interval=240&hidesidetoolbar=0&symboledit=1&saveimage=0&toolbarbg=f1f3f6&studies=%5B%7B%22id%22%3A%22MACD%40tv-basicstudies%22%2C%22version%22%3A60%2C%22inputs%22%3A%7B%22fastLength%22%3A12%2C%22slowLength%22%3A26%2C%22signalLength%22%3A9%7D%7D%2C%7B%22id%22%3A%22RSI%40tv-basicstudies%22%2C%22version%22%3A60%2C%22inputs%22%3A%7B%22length%22%3A14%7D%7D%2C%7B%22id%22%3A%22MAExp%40tv-basicstudies%22%2C%22version%22%3A60%2C%22inputs%22%3A%7B%22length%22%3A20%7D%2C%22plot.color%22%3A%22%23FFFF00%22%7D%2C%7B%22id%22%3A%22MAExp%40tv-basicstudies%22%2C%22version%22%3A60%2C%22inputs%22%3A%7B%22length%22%3A50%7D%2C%22plot.color%22%3A%22%2300FF00%22%7D%2C%7B%22id%22%3A%22MAExp%40tv-basicstudies%22%2C%22version%22%3A60%2C%22inputs%22%3A%7B%22length%22%3A250%7D%2C%22plot.color%22%3A%22%23FF0000%22%7D%5D&theme=Dark&style=1&timezone=Etc%2FUTC&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en&utm_source=coinfidant.com&utm_medium=widget_new&utm_campaign=chart&utm_term=SPY&symbol_sync_mode=group&chart_syncing_group=%F0%9F%90%B6"
-      style="width: 50%; height: 100%; border: 7px double #111; border-radius: 5px;" frameborder="0" allowtransparency="true" scrolling="no"
+      style="width: 100%; height: 99%; border: 4px double #111; border-radius: 5px;" allowtransparency="true" scrolling="no"
       allowfullscreen="yes" defer>
     </iframe>
     <iframe
       id="tradingview"
       src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_9f1a0&symbol=SPY&interval=D&hidesidetoolbar=0&symboledit=1&saveimage=0&toolbarbg=f1f3f6&studies=%5B%7B%22id%22%3A%22MACD%40tv-basicstudies%22%2C%22version%22%3A60%2C%22inputs%22%3A%7B%22fastLength%22%3A12%2C%22slowLength%22%3A26%2C%22signalLength%22%3A9%7D%7D%2C%7B%22id%22%3A%22RSI%40tv-basicstudies%22%2C%22version%22%3A60%2C%22inputs%22%3A%7B%22length%22%3A14%7D%7D%2C%7B%22id%22%3A%22MAExp%40tv-basicstudies%22%2C%22version%22%3A60%2C%22inputs%22%3A%7B%22length%22%3A20%7D%2C%22plot.color%22%3A%22%23FFFF00%22%7D%2C%7B%22id%22%3A%22MAExp%40tv-basicstudies%22%2C%22version%22%3A60%2C%22inputs%22%3A%7B%22length%22%3A50%7D%2C%22plot.color%22%3A%22%2300FF00%22%7D%2C%7B%22id%22%3A%22MAExp%40tv-basicstudies%22%2C%22version%22%3A60%2C%22inputs%22%3A%7B%22length%22%3A250%7D%2C%22plot.color%22%3A%22%23FF0000%22%7D%5D&theme=Dark&style=1&timezone=Etc%2FUTC&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en&utm_source=coinfidant.com&utm_medium=widget_new&utm_campaign=chart&utm_term=SPY&symbol_sync_mode=group&chart_syncing_group=%F0%9F%90%B6"
-      style="width: 50%; height: 100%; border: 7px double #111; border-radius: 5px;" frameborder="0" allowtransparency="true" scrolling="no"
+      style="width: 100%; height: 99%; border: 4px double #111; border-radius: 5px;" allowtransparency="true" scrolling="no"
       allowfullscreen="yes" defer>
     </iframe>
+
 </div>
 <script src="./script.js"></script>
 </body>

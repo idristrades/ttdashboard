@@ -92,9 +92,7 @@
     
     h5 {
       text-align: left;
-      margin-top: 10px;
-      margin-bottom: -12px;
-      margin-right: -8px;
+      margin: 10px -12px -12px -10px;
       background: rgba(154, 111, 50, 0.05);
       color: white;
       padding: 5px;
@@ -158,14 +156,22 @@
     }
 
     .container {
-    padding: 0;
+      padding: 0;
       display: grid;
-      grid-template-columns: 1fr;  
+      grid-template-columns: 1fr;
+      overflow-y: auto; 
     }
+    
     .data {
       width: 100%;
     }
 
-    iframe, .tape {
+    .tape, .chart2 {
       display: none;
     }
+    
+    iframe {
+     padding: 5px;
+     min-height: 650px;
+    }
+ }

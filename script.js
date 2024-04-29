@@ -78,7 +78,7 @@ const modifiedOfferingUrl = offeringUrl + ticker + "&startdt=" + today.toISOStri
 
 // Display the results
 results.innerHTML = `
-  <h5>▣｜STOCK DATA</h5>
+  <h6>▣｜STOCK DATA</h6>
 <ul>
   <li><a href="${modifiedFilingsUrl}" target="_blank">☰｜ RECENT SEC FILINGS</a>
   <li><a href="${modifiedOfferingUrl}" target="_blank">☰｜ RECENT OFFERINGS</a></li>

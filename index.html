@@ -80,10 +80,12 @@
         </script>
       </div>
   <div class="container">
-  
   <div class="data">
   <form id="ticker-form">
-  <p><a class="no-hover" href="https://twitter.com/TradingTheories" target="_blank">𝕏 &#x40TradingTheories</a></p>
+  <div class="social">
+  <a class="no-hover twt" href="https://twitter.com/TradingTheories" target="_blank"><img src="x.png" width="11px">.com</a>
+  <a class="no-hover discord" href="https://discord.com/invite/Y5gcVqvkjz" target="_blank"><img src="disc.png" width="16px"> &nbsp;Discord</a>
+  </div>
     <input type="text" id="ticker" name="ticker" placeholder="🔍 Enter a ticker symbol" required maxlength="6" autofocus onkeydown="handleKeyPress(event);">
     <div class="btns">
     <button id="btn1" type="submit" onclick="changeSymbol()">Sʜᴏᴡ ᴅᴀᴛᴀ</button>
@@ -99,9 +101,9 @@
     <li><a href="https://capedge.com/stock-split-calendar" target="_blank">▣｜ STOCK SPLIT CALENDAR</a></li>
     <li><a href="https://www.marketbeat.com/ipos/lockup-expirations" target="_blank">▣｜ LOCKUP PERIOD TRACKER</a></li>
   </ul>
+
   <div id="results"></div>
   </div>
-  
     <iframe
       id="tradingview" class="chart1"
       src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_9f1a0&symbol=SPY&interval=240&hidesidetoolbar=0&symboledit=1&saveimage=0&toolbarbg=f1f3f6&studies=%5B%7B%22id%22%3A%22MACD%40tv-basicstudies%22%2C%22version%22%3A60%2C%22inputs%22%3A%7B%22fastLength%22%3A12%2C%22slowLength%22%3A26%2C%22signalLength%22%3A9%7D%7D%2C%7B%22id%22%3A%22RSI%40tv-basicstudies%22%2C%22version%22%3A60%2C%22inputs%22%3A%7B%22length%22%3A14%7D%7D%2C%7B%22id%22%3A%22MAExp%40tv-basicstudies%22%2C%22version%22%3A60%2C%22inputs%22%3A%7B%22length%22%3A20%7D%2C%22plot.color%22%3A%22%23FFFF00%22%7D%2C%7B%22id%22%3A%22MAExp%40tv-basicstudies%22%2C%22version%22%3A60%2C%22inputs%22%3A%7B%22length%22%3A50%7D%2C%22plot.color%22%3A%22%2300FF00%22%7D%2C%7B%22id%22%3A%22MAExp%40tv-basicstudies%22%2C%22version%22%3A60%2C%22inputs%22%3A%7B%22length%22%3A250%7D%2C%22plot.color%22%3A%22%23FF0000%22%7D%5D&theme=Dark&style=1&timezone=Etc%2FUTC&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en&utm_source=coinfidant.com&utm_medium=widget_new&utm_campaign=chart&utm_term=SPY&symbol_sync_mode=group&chart_syncing_group=%F0%9F%90%B6"

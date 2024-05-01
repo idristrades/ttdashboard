@@ -21,6 +21,15 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+// Check if screen width is greater than 768px
+if (window.screen.width > 768) {
+  document.addEventListener('keydown', (event) => {
+    if (document.activeElement !== document.getElementById("ticker")) {
+      document.getElementById("ticker").focus();
+    }
+  });
+}
+
 // Clear the input field and results with Escape
   function handleKeyPress(event) {
     if (event.key === "Escape") {

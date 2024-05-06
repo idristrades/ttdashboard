@@ -149,6 +149,24 @@
       justify-content: center;
       opacity: 0.5;
     }
+
+    .social .discord {
+      animation: discord 1s alternate infinite;
+    }
+
+    .social .twt {
+      animation: twt 1s alternate infinite;
+    }
+
+      @keyframes discord {
+      from {background: rgba(88, 101, 242, 0.9);}
+      to {background: rgba(88, 101, 242, 0.4);}
+    }
+    
+      @keyframes twt {
+      from {background: rgba(29, 161, 242, 0.9);}
+      to {background: rgba(29, 161, 242, 0.4);}
+    }
     
     .social .twt:hover {
       background: #1DA1F2;

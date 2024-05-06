@@ -35,7 +35,7 @@ if (window.screen.width > 768) {
     if (event.key === "Escape") {
       document.getElementById("ticker").value = "";
       document.getElementById("results");
-      results.innerHTML = "";
+      results.innerHTML = "<h6>▣｜STOCK DATA</h6>";
     }
   }
 	
@@ -115,7 +115,7 @@ clearBtn.addEventListener("click", function() {
  
   // Clear the results
   const results = document.getElementById("results");
-  results.innerHTML = "";
+  results.innerHTML = "<h6>▣｜STOCK DATA</h6>";
   
   // Refocus the input field
   const inputField = document.getElementById("ticker");

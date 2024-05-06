@@ -151,10 +151,16 @@
     }
 
     .social .discord {
+      border-radius: 8px;
+      border: none;
+      padding: 4px 10px;
       animation: discord 1s alternate infinite;
     }
 
     .social .twt {
+      border-radius: 8px;
+      border: none;
+      padding: 5px 12px;
       animation: twt 1s alternate infinite;
     }
 
@@ -170,9 +176,6 @@
     
     .social .twt:hover {
       background: #1DA1F2;
-      border-radius: 8px;
-      border: none;
-      padding: 5px 12px;
       transition: all 0.25s ease-in-out;
       opacity: 1;
       font-weight: bold;
@@ -180,9 +183,6 @@
     
     .social .discord:hover {
       background: #5865F2;
-      border-radius: 8px;
-      border: none;
-      padding: 4px 10px;
       transition: all 0.25s ease-in-out;
       opacity: 1;
       font-weight: bold;

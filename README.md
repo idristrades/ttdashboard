@@ -1,4 +1,4 @@
-**Title:** ⚡️ Trading Theories Dashboard:
+**Title:** ⚡️ Trading Theories Dashboard
 
 **Description:**
 

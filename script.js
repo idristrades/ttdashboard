@@ -67,6 +67,7 @@ const form4Url = "http://openinsider.com/screener?s=";
 const finvizUrl = "https://finviz.com/quote.ashx?t=";
 const finUrl = "https://stockanalysis.com/stocks/";
 const brwUrl = "https://chartexchange.com/symbol/";
+const shortintUrl = "https://fintel.io/ss/us/";
 const filingsUrl = "https://www.sec.gov/edgar/search/?r=el#/dateRange=30d&entityName=";
 const offeringUrl = "https://www.sec.gov/edgar/search/?r=el#/dateRange=custom&category=custom&entityName=";
 
@@ -82,6 +83,7 @@ const modifiedFinvizUrl = finvizUrl + ticker;
 const modifiedFinUrl = finUrl + ticker + "/financials/ratios/?p=quarterly";
 const modifiedBorrowUrl = brwUrl + ticker + "/borrow-fee/";
 const modifiedFilingsUrl = filingsUrl + ticker;
+const modifiedShortintUrl = shortintUrl + ticker;
 const modifiedOfferingUrl = offeringUrl + ticker + "&startdt=" + today.toISOString().split('T')[0] + 
 "&enddt=2050-12-31&forms=S-1%252CF-1%252CS-3%252CF-3%252CRW%252CEFFECT%252C424B3%252C424B4%252C424B5%252CS-11%252CRW%2520WD";
 
@@ -94,6 +96,7 @@ results.innerHTML = `
   </li><li><a href="${modifiedXcomUrl}" target="_blank">☰｜ RECENT TWEETS</a></li>
   <li><a href="${modifiedNewsUrl}" target="_blank">☰｜ RECENT NEWS</a></li>
   <li><a href="${modifiedForm4Url}" target="_blank">☰｜ INSIDER BUYS</a></li>
+  <li><a href="${modifiedShortintUrl}" target="_blank">☰｜ FLOAT SHORT</a></li>
   <li><a href="${modifiedBorrowUrl}" target="_blank">☰｜ BORROW FEE</a></li>
   <li><a href="${modifiedFinUrl}" target="_blank">☰｜ FINANCIALS</a></li>
   <li><a href="${modifiedFinvizUrl}" target="_blank">☰｜ FINVIZ</a></li>

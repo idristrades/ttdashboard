@@ -38,6 +38,8 @@ This solution addresses that challenge by providing a **centralized data hub**. 
 
 I welcome contributions from the trading community! If you have ideas for improvement or additional shortcuts you'd like to see included, feel free to submit a pull request or send me a DM on Twitter (X.com) or Discord.
 
-I am currently working on a more advancedd version: https://github.com/idristrades/ttdashboard/assets/2335011/f07cf6ea-cf97-45d8-83af-c130522f503b
+I am currently working on a more advancedd version: 
 
 Stay tuned!
+
+https://github.com/idristrades/ttdashboard/assets/2335011/6b1e5f58-cdeb-44dc-a446-42c81fb31596

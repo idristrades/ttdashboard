@@ -30,14 +30,42 @@ if (window.screen.width > 768) {
   });
 }
 
-// Clear the input field and results with Escape
+// Clear the input field, results, and financials with Escape
   function handleKeyPress(event) {
     if (event.key === "Escape") {
       document.getElementById("ticker").value = "";
       document.getElementById("results");
-      results.innerHTML = "<h6>▣｜STOCK DATA</h6>";
+      results.innerHTML = "<h6>▣｜Sᴛᴏᴄᴋ ᴅᴀᴛᴀ</h6><p>Enter a ticker symbol to display its data here</p>";
+  // Clear financials
+      const finDiv = document.getElementById('fin');
+      finDiv.innerHTML = '';
+
+      const widgetSettings = {
+        "height": "100%",
+        "colorTheme": "dark",
+        "isTransparent": true,
+        "symbol": "SPY",
+      };
+
+      const script = document.createElement('script');
+      script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-financials.js';
+      script.async = true;
+      script.innerHTML = JSON.stringify(widgetSettings);
+
+      finDiv.appendChild(script);
     }
   }
+  
+  document.addEventListener("keydown", function(event) {
+  // Check if Escape key is pressed
+  if (event.key === "Escape") {
+    const tradingViewIframe = document.getElementById("tradingview");
+    if (tradingViewIframe) {
+      // Clear the chart
+      tradingViewIframe.src = tradingViewIframe.src.replace(/symbol=[^&]+/, "symbol=SPY");
+    }
+  }
+});
 	
 // Uppercase everything in the input field
 const inputField = document.getElementById("ticker");
@@ -91,10 +119,10 @@ const modifiedOfferingUrl = offeringUrl + ticker + "&startdt=" + today.toISOStri
 results.innerHTML = `
   <h6>▣｜STOCK DATA</h6>
 <ul>
-  <li><a href="${modifiedFilingsUrl}" target="_blank">☰｜ RECENT SEC FILINGS</a>
+  <li><a href="${modifiedFilingsUrl}" target="_blank">☰｜ LATEST SEC FILINGS</a>
   <li><a href="${modifiedOfferingUrl}" target="_blank">☰｜ RECENT OFFERINGS</a></li>
   </li><li><a href="${modifiedXcomUrl}" target="_blank">☰｜ RECENT TWEETS</a></li>
-  <li><a href="${modifiedNewsUrl}" target="_blank">☰｜ RECENT NEWS</a></li>
+  <li><a href="${modifiedNewsUrl}" target="_blank">☰｜ LATEST NEWS</a></li>
   <li><a href="${modifiedForm4Url}" target="_blank">☰｜ INSIDER BUYS</a></li>
   <li><a href="${modifiedShortintUrl}" target="_blank">☰｜ FLOAT SHORT</a></li>
   <li><a href="${modifiedBorrowUrl}" target="_blank">☰｜ BORROW FEE</a></li>
@@ -104,7 +132,7 @@ results.innerHTML = `
 `;
 });
 
-  // The clear function
+  // CLEAR =>
   const clearBtn = document.getElementById("clear-btn");
 clearBtn.addEventListener("click", function() {
 
@@ -115,12 +143,54 @@ clearBtn.addEventListener("click", function() {
       iframe.src = iframe.src.replace(/symbol=[^&]+/, "symbol=SPY");
     }
    }
- 
+
   // Clear the results
   const results = document.getElementById("results");
-  results.innerHTML = "<h6>▣｜STOCK DATA</h6>";
+  results.innerHTML = "<h6>▣｜Sᴛᴏᴄᴋ ᴅᴀᴛᴀ</h6><p>Enter a ticker symbol to display its data here</p>";
   
   // Refocus the input field
   const inputField = document.getElementById("ticker");
   inputField.focus();
+
+  // Clear financials
+  const finDiv = document.getElementById('fin');
+  finDiv.innerHTML = '';
+
+  const widgetSettings = {
+    "height": "100%",
+    "colorTheme": "dark",
+    "isTransparent": true,
+    "symbol": "SPY",
+  };
+
+  const script = document.createElement('script');
+  script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-financials.js';
+  script.async = true;
+  script.innerHTML = JSON.stringify(widgetSettings);
+
+  finDiv.appendChild(script);
 });
+
+// Financials
+    document.getElementById('ticker-form').onsubmit = function(event) {
+      event.preventDefault();
+      const newSymbol = document.getElementById('ticker').value || "SPY";
+      const finDiv = document.getElementById('fin');
+  
+      finDiv.innerHTML = '';
+  
+      const widgetSettings = {
+        "height": "100%",
+        "colorTheme": "dark",
+        "isTransparent": true,
+        "displayMode": "regular",
+        "symbol": newSymbol,
+      };
+  
+      const script = document.createElement('script');
+      script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-financials.js';
+      script.async = true;
+      script.innerHTML = JSON.stringify(widgetSettings);
+  
+      finDiv.appendChild(script);
+    };

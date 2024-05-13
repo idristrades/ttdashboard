@@ -1,8 +1,10 @@
    * {
-      font-family: "Ubuntu";
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Ubuntu";
     }
 	
     body {
@@ -141,14 +143,6 @@
       justify-content: center;
       gap: 70px;
     }
-    
-    .social .twt, .discord {
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0.7;
-    }
 
     .social .discord {
       border-radius: 8px;
@@ -175,15 +169,13 @@
     }
     
     .social .twt:hover {
-      background: #1DA1F2;
+      font-weight: 600;
       transition: all 0.25s ease-in-out;
-      opacity: 1;
     }
     
     .social .discord:hover {
-      background: #5865F2;
+      font-weight: 600;
       transition: all 0.25s ease-in-out;
-      opacity: 1;
     }
     
     ul {
@@ -200,14 +192,14 @@
       padding: 1.25px;
     }
     
-    a {
+    .data a {
       color: #eee;
       text-decoration: none;
       font-size: 12px;
       border: none;
     }
     
-    a:hover:not(.no-hover) {
+    .data a:hover:not(.no-hover) {
       transition: all 0.25s ease-in-out;
       background: rgba(32, 150, 170, 0.8);
       padding: 5px 12px 5px 0;
@@ -223,6 +215,18 @@
       text-align: center;
     }
     
+    #fin {
+      width: 100%;
+    }
+    
+    .mobile-nav {
+      display: none;
+    }
+  
+    .hidden {
+      display: flex;
+    }
+    
     @media only screen and (max-width: 768px) {
     .container {
       padding: 10px;
@@ -234,6 +238,7 @@
 
     .data {
       width: 100%;
+      height: 100%;
     }
 
     .tape {
@@ -241,6 +246,54 @@
     }
 
     iframe {
-     min-height: 675px;
+     min-height: 575px;
     }
+    
+.hidden {
+  display: none;
+}
+
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-height: 50px;
+  background: #000;
+  border: 1px outset grey;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.mobile-nav ul {
+margin-top: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.mobile-nav a {
+  color: #fff;
+  font-size: 10px;
+    padding: -50px 0;
+}
+
+.mobile-nav a:hover{
+  font-weight: 600;
+  transition: all .2s ease-in-out;
+}
+
+.mobile-nav a:hover i{
+  color: white;
+  transform: scale(1.25);
+  font-weight: 700;
+  transition: all .2s ease-in-out;
+}
+
+i {
+  margin-right: 3px;
+  color: lightseagreen;
+}    
  }

@@ -196,3 +196,20 @@ clearBtn.addEventListener("click", function() {
   
       finDiv.appendChild(script);
     };
+
+// Navigation menu on mobile
+const navLinks = document.querySelectorAll('nav a');
+const sections = document.querySelectorAll('section');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const clickedSectionId = event.target.getAttribute('href').slice(1);
+    const clickedSection = document.getElementById(clickedSectionId);
+    
+// Show the clicked section and hide all others
+    sections.forEach(section => {
+      section.classList.toggle('hidden', section !== clickedSection);
+    });
+  });
+});

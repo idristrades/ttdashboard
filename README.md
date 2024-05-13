@@ -40,4 +40,4 @@ I welcome contributions from the trading community! If you have ideas for improv
 
 I am currently working on a more advancedd version. Stay tuned!
 
-https://github.com/idristrades/ttdashboard/assets/2335011/6b1e5f58-cdeb-44dc-a446-42c81fb31596
+https://github.com/idristrades/ttdashboard/assets/2335011/9b6bbe0d-9121-4b0f-a50b-d07bbf1df67a

@@ -34,6 +34,7 @@
 
     .data {
       zoom: .88;
+      height: 100%;
       padding: 12px;
       background: rgba(0, 0, 0, 0.3);
       box-shadow: inset -0.3em 0.001em 0.3em #111;
@@ -241,7 +242,6 @@
 
     .data {
       width: 100%;
-      height: 100%;
       border-radius: 8px;
       box-shadow: inset -0.3em 0.001em 0.3em #111, inset 0.3em -0.001em 0.3em #111;
     }
@@ -299,5 +299,6 @@
 i {
   margin-right: 2px;
   color: lightseagreen;
+  font-size: 16px;
 }    
 }

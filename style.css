@@ -284,7 +284,7 @@
 
 .mobile-nav a:hover i{
   color: white;
-  transform: scale(1.5);
+  transform: scale(1.2);
   font-weight: 700;
   transition: all .3s ease-in-out;
 }

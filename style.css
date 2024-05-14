@@ -71,7 +71,6 @@
       border-radius: 8px;
       font-weight: bold;
       padding: 10px;
-      animation: blink 1s alternate infinite;
     }
     
     #btn1:hover {
@@ -81,11 +80,6 @@
     #btn1:active {
       transform: scale(.9);
       transition: all 0.3s ease-in-out;
-    }
-
-    @keyframes blink {
-      from {background: green;}
-      to {background: lightseagreen;}
     }
     
     #clear-btn {

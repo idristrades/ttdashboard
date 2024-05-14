@@ -127,12 +127,6 @@
       font-size: 14px;
       font-weight: bold;
       box-shadow: -0.1em 0.1em 0.05em lightseagreen, -0.2em 0em 0.2em seagreen;
-      animation: blinkh6 1s alternate infinite;
-    }
-
-      @keyframes blinkh6 {
-      from {background: rgba(0, 250, 154, 0.3);}
-      to {background: rgba(255, 255, 250, 0.2);}
     }
 
     .social {
@@ -295,7 +289,7 @@
   transition: all .3s ease-in-out;
 }
 
-i {
+.mobile-nav i {
   margin-right: 2px;
   color: lightseagreen;
   font-size: 16px;

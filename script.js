@@ -80,6 +80,7 @@ const form = document.getElementById("ticker-form");
 const results = document.getElementById("results");
 
 form.addEventListener("submit", function(event) {
+ inputField.value = inputField.value.trim();
  event.preventDefault();
 
 const ticker = document.getElementById("ticker").value.toUpperCase();

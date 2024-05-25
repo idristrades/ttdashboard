@@ -95,10 +95,10 @@ if (ticker.length < 1 || ticker.length > 6) {
 const xcomUrl = "https://x.com/search?q=%24";
 const newsUrl = "https://www.stocktitan.net/news/";
 const form4Url = "http://openinsider.com/screener?s=";
-const institUrl = "https://fintel.io/so/us/";
 const finUrl = "https://stockanalysis.com/stocks/";
 const brwUrl = "https://chartexchange.com/symbol/";
 const shortintUrl = "https://fintel.io/ss/us/";
+const institUrl = "https://fintel.io/ss/us/";
 const filingsUrl = "https://www.sec.gov/edgar/search/?r=el#/dateRange=30d&entityName=";
 const offeringUrl = "https://www.sec.gov/edgar/search/?r=el#/dateRange=custom&category=custom&entityName=";
 
@@ -112,9 +112,9 @@ const modifiedNewsUrl = newsUrl + ticker;
 const modifiedForm4Url = form4Url + ticker + "&o=&pl=&ph=&ll=&lh=&fd=365&fdr=&td=0&tdr=&fdlyl=&fdlyh=&daysago=&xp=1&vl=&vh=&ocl=&och=&sic1=-1&sicl=100&sich=9999&grp=0&nfl=&nfh=&nil=&nih=&nol=&noh=&v2l=&v2h=&oc2l=&oc2h=&sortcol=0&cnt=100&page=1";
 const modifiedFinUrl = finUrl + ticker + "/financials/ratios/?p=quarterly";
 const modifiedBorrowUrl = brwUrl + ticker + "/borrow-fee/";
-const modifiedInstitUrl = institUrl + ticker;
 const modifiedFilingsUrl = filingsUrl + ticker;
 const modifiedShortintUrl = shortintUrl + ticker;
+const modifiedInstitUrl = institUrl + ticker;
 const modifiedOfferingUrl = offeringUrl + ticker + "&startdt=" + today.toISOString().split('T')[0] + 
 "&enddt=2050-12-31&forms=S-1%252CF-1%252CS-3%252CF-3%252CRW%252CEFFECT%252C424B3%252C424B4%252C424B5%252CS-11%252CRW%2520WD";
 
@@ -208,10 +208,49 @@ navLinks.forEach(link => {
     const clickedSectionId = link.href.split('#')[1];
     const clickedSection = document.getElementById(clickedSectionId);
 
-    // Show only the clicked section and hide others
+    // Show only the clicked section and hide the rest
     sections.forEach(section => {
       section.classList.toggle('hidden', section !== clickedSection);
     });
   });
 });
 
+
+// SECTION 4 handling
+const navItems = document.querySelectorAll("nav a");
+const section4 = document.getElementById("section4");
+
+function handleResize() {
+  const isDesktop = window.innerWidth >= 768;
+  if (isDesktop) {
+    section4.style.display = "none"; // Hide on desktop resize
+  } else {
+    // Check if section4 was previously shown by sec-4 click
+    if (section4.classList.contains("on-mobile")) {
+      section4.style.display = "block"; // Keep visible on mobile resize
+    } else {
+      section4.style.display = "none"; // Hide on mobile resize if not shown by sec-4
+    }
+  }
+}
+
+// Add event listener for window resize
+window.addEventListener("resize", handleResize);
+
+navItems.forEach(navItem => {
+  navItem.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default anchor tag behavior
+
+    section4.classList.remove("on-mobile"); // Reset class for mobile resize handling
+    section4.style.display = "none"; // Reset section4 display to none for all clicks
+
+    // Check if clicked item is sec-4
+    if (navItem.id === "sec-4") {
+      section4.style.display = "block"; // Show section4 only for sec-4 click
+      section4.classList.add("on-mobile"); // Add class for mobile resize handling
+    }
+  });
+});
+
+// Call handleResize function initially
+handleResize();

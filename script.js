@@ -37,7 +37,7 @@ function handleEscape(event) {
     document.getElementById("ticker").value = "";
 
     // Clear results
-    document.getElementById("results").innerHTML = "<h6>▣｜Sᴛᴏᴄᴋ ᴅᴀᴛᴀ</h6><p>Enter a ticker symbol to display its data here</p>";
+    document.getElementById("results").innerHTML = "<h6>▣｜SHORTCUTS</h6><p>Enter a ticker symbol to display the links here</p>";
 
     // Clear financials
     const finDiv = document.getElementById('fin');
@@ -120,7 +120,7 @@ const modifiedOfferingUrl = offeringUrl + ticker + "&startdt=" + today.toISOStri
 
 // Display the results
 results.innerHTML = `
-  <h6>▣｜STOCK DATA</h6>
+  <h6>▣｜SHORTCUTS</h6>
 <ul>
   <li><a href="${modifiedFilingsUrl}" target="_blank">☰｜ LATEST SEC FILINGS</a>
   <li><a href="${modifiedOfferingUrl}" target="_blank">☰｜ RECENT OFFERINGS</a></li>
@@ -149,7 +149,7 @@ clearBtn.addEventListener("click", function() {
 
   // Clear the results
   const results = document.getElementById("results");
-  results.innerHTML = "<h6>▣｜Sᴛᴏᴄᴋ ᴅᴀᴛᴀ</h6><p>Enter a ticker symbol to display its data here</p>";
+  results.innerHTML = "<h6>▣｜SHORTCUTS</h6><p>Enter a ticker symbol to display the links here</p>";
   
   // Refocus the input field
   const inputField = document.getElementById("ticker");

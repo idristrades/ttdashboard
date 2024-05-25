@@ -95,7 +95,6 @@ if (ticker.length < 1 || ticker.length > 6) {
 const xcomUrl = "https://x.com/search?q=%24";
 const newsUrl = "https://www.stocktitan.net/news/";
 const form4Url = "http://openinsider.com/screener?s=";
-const finvizUrl = "https://finviz.com/quote.ashx?t=";
 const institUrl = "https://fintel.io/so/us/";
 const finUrl = "https://stockanalysis.com/stocks/";
 const brwUrl = "https://chartexchange.com/symbol/";
@@ -111,7 +110,6 @@ today.setFullYear(today.getFullYear() - 3);
 const modifiedXcomUrl = xcomUrl + ticker + "&src=recent_search_click&f=live";
 const modifiedNewsUrl = newsUrl + ticker;
 const modifiedForm4Url = form4Url + ticker + "&o=&pl=&ph=&ll=&lh=&fd=365&fdr=&td=0&tdr=&fdlyl=&fdlyh=&daysago=&xp=1&vl=&vh=&ocl=&och=&sic1=-1&sicl=100&sich=9999&grp=0&nfl=&nfh=&nil=&nih=&nol=&noh=&v2l=&v2h=&oc2l=&oc2h=&sortcol=0&cnt=100&page=1";
-const modifiedFinvizUrl = finvizUrl + ticker;
 const modifiedFinUrl = finUrl + ticker + "/financials/ratios/?p=quarterly";
 const modifiedBorrowUrl = brwUrl + ticker + "/borrow-fee/";
 const modifiedInstitUrl = institUrl + ticker;
@@ -133,7 +131,6 @@ results.innerHTML = `
   <li><a href="${modifiedShortintUrl}" target="_blank">☰｜ FLOAT SHORT</a></li>
   <li><a href="${modifiedBorrowUrl}" target="_blank">☰｜ BORROW FEE</a></li>
   <li><a href="${modifiedFinUrl}" target="_blank">☰｜ FINANCIALS</a></li>
-  <li><a href="${modifiedFinvizUrl}" target="_blank">☰｜ FINVIZ</a></li>
 </ul>
 `;
 });

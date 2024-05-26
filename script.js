@@ -98,7 +98,7 @@ const form4Url = "http://openinsider.com/screener?s=";
 const finUrl = "https://stockanalysis.com/stocks/";
 const brwUrl = "https://chartexchange.com/symbol/";
 const shortintUrl = "https://fintel.io/ss/us/";
-const institUrl = "https://fintel.io/ss/us/";
+const institUrl = "https://fintel.io/so/us/";
 const filingsUrl = "https://www.sec.gov/edgar/search/?r=el#/dateRange=30d&entityName=";
 const offeringUrl = "https://www.sec.gov/edgar/search/?r=el#/dateRange=custom&category=custom&entityName=";
 
@@ -127,7 +127,7 @@ results.innerHTML = `
   </li><li><a href="${modifiedXcomUrl}" target="_blank">☰｜ RECENT TWEETS</a></li>
   <li><a href="${modifiedNewsUrl}" target="_blank">☰｜ LATEST NEWS</a></li>
   <li><a href="${modifiedForm4Url}" target="_blank">☰｜ INSIDER BUYS</a></li>
-  <li><a href="${modifiedInstitUrl}" target="_blank">☰｜ FORM 13G-D-F</a></li>
+  <li><a href="${modifiedInstitUrl}" target="_blank">☰｜ FORM 13G.D.F</a></li>
   <li><a href="${modifiedShortintUrl}" target="_blank">☰｜ FLOAT SHORT</a></li>
   <li><a href="${modifiedBorrowUrl}" target="_blank">☰｜ BORROW FEE</a></li>
   <li><a href="${modifiedFinUrl}" target="_blank">☰｜ FINANCIALS</a></li>

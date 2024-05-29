@@ -127,7 +127,7 @@ results.innerHTML = `
   </li><li><a href="${modifiedXcomUrl}" target="_blank">☰｜ RECENT TWEETS</a></li>
   <li><a href="${modifiedNewsUrl}" target="_blank">☰｜ LATEST NEWS</a></li>
   <li><a href="${modifiedForm4Url}" target="_blank">☰｜ INSIDER BUYS</a></li>
-  <li><a href="${modifiedInstitUrl}" target="_blank">☰｜ 13D - 13G - 13F</a></li>
+  <li><a href="${modifiedInstitUrl}" target="_blank">☰｜ 13D-13G-13F</a></li>
   <li><a href="${modifiedShortintUrl}" target="_blank">☰｜ FLOAT SHORT</a></li>
   <li><a href="${modifiedBorrowUrl}" target="_blank">☰｜ BORROW FEE</a></li>
   <li><a href="${modifiedFinUrl}" target="_blank">☰｜ FINANCIALS</a></li>

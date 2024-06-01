@@ -223,7 +223,7 @@ const section4 = document.getElementById("section4");
 function handleResize() {
   const isDesktop = window.innerWidth >= 768;
   if (isDesktop) {
-    section4.style.display = "none"; // Hide on desktop resize
+    section4.style.display = "none";
   } else {
     // Check if section4 was previously shown by sec-4 click
     if (section4.classList.contains("on-mobile")) {
@@ -254,3 +254,39 @@ navItems.forEach(navItem => {
 
 // Call handleResize function initially
 handleResize();
+
+
+// SECTION 5 handling
+const section5 = document.getElementById("section5");
+
+function handleResizee() {
+  const isDesktop = window.innerWidth >= 768;
+  if (isDesktop) {
+    section5.style.display = "none";
+  } else {
+
+    if (section5.classList.contains("on-mobile")) {
+      section5.style.display = "block";
+    } else {
+      section5.style.display = "none";
+    }
+  }
+}
+
+window.addEventListener("resize", handleResizee);
+
+navItems.forEach(navItem => {
+  navItem.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    section5.classList.remove("on-mobile");
+    section5.style.display = "none";
+
+    if (navItem.id === "sec-5") {
+      section5.style.display = "block";
+      section5.classList.add("on-mobile");
+    }
+  });
+});
+
+handleResizee();

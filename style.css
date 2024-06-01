@@ -265,8 +265,8 @@
       gap: 5px;
     }
 
-    .mobile-nav:hover a {
-      font-weight: 700;
+    .mobile-nav a:hover {
+      color: lightseagreen;
       transition: all .3s ease-in-out;
     }
 

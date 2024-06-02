@@ -200,16 +200,21 @@
       text-align: center;
       padding: 10px;
       display: none;
-      border-radius: 7px;
-      border: 1px solid #333;
       box-shadow: inset -0.3em 0.001em 0.3em #111, inset 0.3em -0.001em 0.3em #111;
     }
     
    .part4 {
       height: 100%;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 20px;
+    }
+    
+    .part4 img {
+      width: 90%;
+      border-radius: 15px;
     }
     
     .mobile-nav {

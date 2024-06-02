@@ -196,7 +196,7 @@
       height: 100%;
     }
     
-    #section4,  #section5{
+    #section4, #section5{
       text-align: center;
       padding: 10px;
       display: none;
@@ -215,6 +215,16 @@
     .part4 img {
       width: 90%;
       border-radius: 15px;
+      box-shadow: -0.3em 0.2em 0.4em #111, 0.3em -0.2em 0.4em #111;
+    }
+    
+    .part4 p:hover {
+      padding: 10px;
+      background: lightseagreen;
+      border-radius: 7px;
+      box-shadow: -0.3em 0.2em 0.9em #111, 0.3em -0.2em 0.9em #111;
+      transition: all .2s ease-in-out;
+      cursor: pointer;
     }
     
     .mobile-nav {

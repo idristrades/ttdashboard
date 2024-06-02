@@ -279,6 +279,7 @@ button[type="submit"]:hover {
 #contact-form textarea {
   height: 150px;
   width: 220px;
+  text-align: center;
 }
 
 /* MOBILE VIEW */   

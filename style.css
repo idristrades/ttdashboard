@@ -198,7 +198,7 @@
     
     #section4,  #section5{
       text-align: center;
-      padding: 12px;
+      padding: 10px;
       display: none;
       border-radius: 7px;
       border: 1px solid #333;
@@ -210,7 +210,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px inset #111;
     }
     
     .mobile-nav {
@@ -220,8 +219,69 @@
     .hidden {
       display: flex;
     }
+    
+/* CONTACT FORM */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 333px;
+}
 
- /* MOBILE VIEW */   
+.form-group, h2 {
+  margin-bottom: 10px;
+  color: lightseagreen;
+}
+
+#contact-form h2 {
+  font-weight: 800;
+}
+
+
+.form-group label {
+  font-size: 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background: lightseagreen;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: seagreen;
+  font-weight: 600;
+}
+
+#contact-form textarea {
+  height: 120px;
+  width: 220px;
+}
+
+/* MOBILE VIEW */   
     @media only screen and (max-width: 768px) {
     
     .container {
@@ -254,7 +314,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 27px;
+      gap: 25px;
     }
 
     .mobile-nav a {

@@ -196,13 +196,6 @@
       height: 100%;
     }
     
-    #section4, #section5{
-      text-align: center;
-      padding: 10px;
-      display: none;
-      box-shadow: inset -0.3em 0.001em 0.3em #111, inset 0.3em -0.001em 0.3em #111;
-    }
-    
    .part4 {
       height: 100%;
       display: flex;
@@ -237,8 +230,9 @@
     
 /* CONTACT FORM | SECTION 5*/
 .part5 {
-  padding-top: 30px;
+  padding-top: 40px;
   display: flex;
+  text-align: center;
 }
 
 #contact-form {

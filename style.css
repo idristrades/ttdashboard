@@ -181,11 +181,13 @@
     
     .part4 p:hover {
       padding: 10px;
-      background: lightseagreen;
-      border-radius: 7px;
-      box-shadow: -0.3em 0.2em 0.9em #111, 0.3em -0.2em 0.9em #111;
+      border: none;
+      background: rgba(17, 100, 77, 0.1);
+      border-radius: 10px;
+      box-shadow: -0.03em 0.02em 0.3em #fff;
       transition: all .2s ease-in-out;
       cursor: pointer;
+      font-weight: 700;
     }
     
     .mobile-nav {
@@ -195,7 +197,7 @@
     .hidden {
       display: flex;
     }
-    
+
 /* CONTACT FORM | SECTION 5*/
 .part5 {
   padding-top: 40px;
@@ -271,10 +273,11 @@ button[type="submit"]:hover {
 /* DOCK for desktop */
 #dock {
   position: fixed;
-  bottom: 8px;
+  bottom: 12px;
   width: 19%;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 7px;
+  zoom: .75;
 }
 
 #dock ul, #dock2 ul {
@@ -290,14 +293,18 @@ button[type="submit"]:hover {
   color: #fff;
 }
 
+#dock li:hover i, #dock2 li:hover i {
+  color: #000;
+}
+
 #dock li:hover a, #dock2 li:hover a {
-  border: 2px solid #555 ;
+  background: #fff;
   transition: all 0.2s ease-in-out;
 }
     .discord {
       border-radius: 8px;
       padding: 4px;
-      background: rgba(88, 101, 242, .8);
+      background: rgba(88, 101, 242, 1);
       border: .001px solid #222 ;
     }
 
@@ -311,7 +318,7 @@ button[type="submit"]:hover {
     .paypal {
       border-radius: 8px;
       padding: 5px 9px;
-      background: rgba(0, 48, 135, .8);
+      background: rgba(0, 48, 135, 1);
       border: .001px solid #222 ;
     }
     

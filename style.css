@@ -315,10 +315,10 @@ button[type="submit"]:hover {
       border: .001px solid #222;
     }
     
-    .paypal {
+    .pinetwork {
       border-radius: 8px;
       padding: 5px 9px;
-      background: rgba(0, 48, 135, 1);
+      background: rgba(93, 44, 98, 100);
       border: .001px solid #222 ;
     }
     

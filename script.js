@@ -110,7 +110,6 @@ today.setFullYear(today.getFullYear() - 3);
 const modifiedXcomUrl = xcomUrl + ticker + "&src=recent_search_click&f=live";
 const modifiedNewsUrl = newsUrl + ticker;
 const modifiedForm4Url = form4Url + ticker + "&o=&pl=&ph=&ll=&lh=&fd=365&fdr=&td=0&tdr=&fdlyl=&fdlyh=&daysago=&xp=1&vl=&vh=&ocl=&och=&sic1=-1&sicl=100&sich=9999&grp=0&nfl=&nfh=&nil=&nih=&nol=&noh=&v2l=&v2h=&oc2l=&oc2h=&sortcol=0&cnt=100&page=1";
-const modifiedFinUrl = finUrl + ticker + "/financials/ratios/?p=quarterly";
 const modifiedBorrowUrl = brwUrl + ticker + "/borrow-fee/";
 const modifiedFilingsUrl = filingsUrl + ticker;
 const modifiedShortintUrl = shortintUrl + ticker;
@@ -130,7 +129,6 @@ results.innerHTML = `
   <li><a href="${modifiedInstitUrl}" target="_blank">☰｜ 13G-13D / 13F</a></li>
   <li><a href="${modifiedShortintUrl}" target="_blank">☰｜ FLOAT SHORT</a></li>
   <li><a href="${modifiedBorrowUrl}" target="_blank">☰｜ BORROW FEE</a></li>
-  <li><a href="${modifiedFinUrl}" target="_blank">☰｜ FINANCIALS</a></li>
 </ul>
 `;
 });
